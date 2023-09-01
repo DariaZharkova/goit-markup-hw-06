@@ -53,6 +53,16 @@
             </li>
           </ul>
         </address>
+
+        <button
+          class="menu-burger js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Main content -->
@@ -130,6 +140,10 @@
             <li class="works-list-item">
               <img
                 class="works-list-img img"
+                srcset="
+                  ./images/Studio/img1.jpg    1x,
+                  ./images/Studio/img1@2x.jpg 2x
+                "
                 src="./images/Studio/img1.jpg"
                 alt="Monitor"
                 width="360"
@@ -139,6 +153,10 @@
             <li class="works-list-item">
               <img
                 class="works-list-img img"
+                srcset="
+                  ./images/Studio/img2.jpg    1x,
+                  ./images/Studio/img2@2x.jpg 2x
+                "
                 src="./images/Studio/img2.jpg"
                 alt="Smartphone"
                 width="360"
@@ -148,6 +166,10 @@
             <li class="works-list-item">
               <img
                 class="works-list-img img"
+                srcset="
+                  ./images/Studio/img3.jpg    1x,
+                  ./images/Studio/img3@2x.jpg 2x
+                "
                 src="./images/Studio/img3.jpg"
                 alt="Macbook and smartphone"
                 width="360"
@@ -165,6 +187,7 @@
             <li class="team-list-item">
               <img
                 class="team-list-img img"
+                srcset="./images/Studio/Card1.jpg 1x ./images/Studio/Card1@2x.jpg 2x"
                 src="./images/Studio/Card1.jpg"
                 alt="Photo Mark Guerrero"
                 width="264"
@@ -208,6 +231,7 @@
             <li class="team-list-item">
               <img
                 class="team-list-img img"
+                srcset="./images/Studio/Card2.jpg 1x ./images/Studio/Card2@2x.jpg 2x"
                 src="./images/Studio/Card2.jpg"
                 alt="Photo Tom Ford"
                 width="264"
@@ -251,6 +275,7 @@
             <li class="team-list-item">
               <img
                 class="team-list-img img"
+                srcset="./images/Studio/Card3.jpg 1x ./images/Studio/Card3@2x.jpg 2x"
                 src="./images/Studio/Card3.jpg"
                 alt="Photo Camila Garcia"
                 width="264"
@@ -294,6 +319,7 @@
             <li class="team-list-item">
               <img
                 class="team-list-img img"
+                srcset="./images/Studio/Card4.jpg 1x ./images/Studio/Card4@2x.jpg 2x"
                 src="./images/Studio/Card4.jpg"
                 alt="Photo Daniel Wilson"
                 width="264"
@@ -389,7 +415,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-container container">
         <div class="logo-container">
           <a class="footer-logo link" href="./index.html"
@@ -453,7 +479,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Modal Window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -552,6 +578,87 @@
         </form>
       </div>
     </div>
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="mobile-menu-wrapper">
+        <button class="menu-toggle js-close-menu">
+          <svg class="menu-toggle-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu list">
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link current link" href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="./portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="">Contacts</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-address-list list">
+          <li class="mobile-address-item">
+            <a class="mobile-address-link phone link" href="tel:+110001111111">
+              +11 (000) 111-11-11
+            </a>
+          </li>
+          <li class="mobile-address-item">
+            <a
+              class="mobile-address-link email link"
+              href="mailto:info@devstudio.com"
+            >
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+
+        <ul class="mobile-list-socials list">
+          <li class="mobile-list-socials-item">
+            <a class="mobile-list-socials-link link" href="">
+              <svg class="mobile-socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-list-socials-item">
+            <a class="mobile-list-socials-link link" href="">
+              <svg class="mobile-socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-list-socials-item">
+            <a class="mobile-list-socials-link link" href="">
+              <svg class="mobile-socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-list-socials-item">
+            <a class="mobile-list-socials-link link" href="">
+              <svg class="mobile-socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
